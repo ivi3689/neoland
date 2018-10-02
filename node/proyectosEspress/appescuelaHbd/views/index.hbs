@@ -1,0 +1,13 @@
+<p>
+  Hola desde el Index
+</p>
+<p>
+  El título es  {{title}}
+</p>
+<ol>
+  {{#each animales as |animal|}}
+    <li> {{animal}} {{@index}}</li>
+    {{else}}
+    No existe ningún animal
+  {{/each}}
+</ol>

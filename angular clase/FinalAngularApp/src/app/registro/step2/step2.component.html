@@ -1,0 +1,44 @@
+
+<div class="col-md-6 offset-md-3 text-left">
+    <form [formGroup]="formulario" (ngSubmit)="enviarStep2()">
+      <div class="form-group">
+        <label for="calle">Calle</label>
+        <input type="text" [ngClass]="{'form-control': true, 'is-valid':(formulario.controls.calle.dirty && formulario.controls.calle.valid), 'is-invalid':(formulario.controls.calle.dirty && !formulario.controls.calle.valid)}"
+          id="calle" placeholder="Introduce una calle o similar" formControlName="calle">
+          <div class="error-feedback" *ngIf="formulario.controls.calle.dirty && formulario.controls.calle.errors">
+              Por favor ponga una calle.
+            </div>
+      </div>
+      <div class="form-group">
+        <label for="numero">Numero</label>
+        <input type="text" [ngClass]="{'form-control': true, 'is-valid':(formulario.controls.numero.dirty && formulario.controls.numero.valid), 'is-invalid':(formulario.controls.numero.dirty && !formulario.controls.numero.valid)}"
+          id="numero" placeholder="Introduce el numero de portal" formControlName="numero">
+          <div class="error-feedback" *ngIf="formulario.controls.numero.dirty && formulario.controls.numero.errors">
+              Por favor ponga numero.
+            </div>
+      </div>
+      <div class="form-group">
+        <label for="piso">Piso</label>
+        <input type="text" [ngClass]="{'form-control': true, 'is-valid':(formulario.controls.piso.dirty && formulario.controls.piso.valid), 'is-invalid':(formulario.controls.piso.dirty && !formulario.controls.piso.valid)}"
+          id="exampleFormControlpiso" placeholder="Introduce un piso" formControlName="piso">
+          <div class="error-feedback" *ngIf="formulario.controls.piso.dirty && formulario.controls.piso.errors">
+              Por favor ponga un piso.
+            </div>
+      </div>
+      <div class="form-group">
+        <label for="letra">Letra</label>
+        <input type="text" [ngClass]="{'form-control': true, 'is-valid':(formulario.controls.letra.dirty && formulario.controls.letra.valid), 'is-invalid':(formulario.controls.letra.dirty && !formulario.controls.letra.valid)}" id="exampleFormControlletra" placeholder="Introduce la letra" formControlName="letra">
+        <div class="error-feedback" *ngIf="formulario.controls.letra.dirty && formulario.controls.letra.errors">
+            Por favor ponga una letra del piso.
+          </div>
+      </div>
+      <div class="form-group">
+        <label for="zip">Codigo Postal</label>
+        <input type="text" [ngClass]="{'form-control': true, 'is-valid':(formulario.controls.zip.dirty && formulario.controls.zip.valid), 'is-invalid':(formulario.controls.zip.dirty && !formulario.controls.zip.valid)}" id="exampleFormControlzip" placeholder="Introduce el zip" formControlName="zip">
+        <div class="error-feedback" *ngIf="formulario.controls.zip.dirty && formulario.controls.zip.errors">
+            Por favor ponga un codigo postal correcto.
+          </div>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="!formulario.valid">Submit</button>
+    </form>
+  </div>

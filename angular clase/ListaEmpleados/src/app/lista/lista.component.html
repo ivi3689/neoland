@@ -1,0 +1,15 @@
+<div>
+	<h1>Lista de Empleados</h1>
+
+
+
+	<label for="datos" *ngFor="let e of arrayLista">
+      <div class="imagen"><img src="{{e.picture}}" alt=""></div>
+		<div type="text" placeholder="Introducir el nombre">{{e.name}}</div>
+		<div type="text" placeholder="Introducir los apellidos">{{e.lastname}}</div>
+		<div type="text" placeholder="Introducir Direcccion">{{e.adress}}</div>
+    <div type="text" placeholder="Introducir el Depart">{{e.department}}</div>
+
+	</label>
+
+</div>

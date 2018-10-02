@@ -1,0 +1,14 @@
+<ul>
+  <li *ngFor="let p of prods">
+    {{p.mostrarProducto()}}
+  </li>
+</ul>
+
+ <div>
+  <button (click)="selectDepartamento('informatica')">Informatica</button>
+  <button (click)="selectDepartamento('imagen')">Imagen</button>
+  <button (click)="selectDepartamento('sonido')">Sonido</button>
+</div>
+
+<button (click)="ordenarProductos(true)">Ordenar productos asc</button>
+<button (click)="ordenarProductos(false)">Ordenar productos des</button>

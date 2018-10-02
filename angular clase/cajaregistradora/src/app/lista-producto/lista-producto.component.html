@@ -1,0 +1,7 @@
+
+
+		<div class="comida">{{titulo}}</div>
+
+			<div class="botonComida">
+				<div class="boton" *ngFor="let prod of productos" (click)="agregarAPedido(prod)"><img [src]="prod.imagen"></div>
+			</div>

@@ -1,0 +1,12 @@
+.wrapper{
+  background-color: lightgoldenrodyellow;
+
+}
+.titular{
+  border:3px solid grey;
+  font-size: 20px;
+  margin :10px;
+}
+.ficha{
+  border:3px solid red;
+}

@@ -1,0 +1,106 @@
+{{!-- <ol>
+  {{#each alumnos }}
+    <li> {{this.nombre}}</li>
+    {{else}}
+    No existe ningún alumno
+  {{/each}}
+</ol> --}}
+<div class="panel panel-default">
+   <div class="panel-heading">
+       <font style="vertical-align: inherit;">
+           <font style="vertical-align: inherit;">
+               Alumnos inscritos
+           </font>
+       </font>
+   </div>
+   <!-- /.panel-heading -->
+   <div class="panel-body">
+       <div class="table-responsive">
+           <table class="table">
+               <thead>
+                   <tr>
+                       <th>
+                           <font style="vertical-align: inherit;">
+                               <font style="vertical-align: inherit;">#</font>
+                           </font>
+                       </th>
+                       <th>
+                           <font style="vertical-align: inherit;">
+                               <font style="vertical-align: inherit;">Nombre de pila</font>
+                           </font>
+                       </th>
+                       <th>
+                           <font style="vertical-align: inherit;">
+                               <font style="vertical-align: inherit;">Apellido</font>
+                           </font>
+                       </th>
+                       <th>
+                           <font style="vertical-align: inherit;">
+                               <font style="vertical-align: inherit;">Fecha de nacimiento</font>
+                           </font>
+                       </th>
+                       <th>
+                           <font style="vertical-align: inherit;">
+                               <font style="vertical-align: inherit;">Promedio</font>
+                           </font>
+                       </th>
+                       <th>
+                           <font style="vertical-align: inherit;">
+                               <font style="vertical-align: inherit;">Sexo</font>
+                           </font>
+                       </th>
+                       <th>
+                           <font style="vertical-align: inherit;">
+                               <font style="vertical-align: inherit;">Escuela</font>
+                           </font>
+                       </th>
+                   </tr>
+               </thead>
+               <tbody>
+                  {{#each alumnos}}
+                   <tr class="success">
+                       <td>
+                           <font style="vertical-align: inherit;">
+                               <font style="vertical-align: inherit;">{{this.id}}</font>
+                           </font>
+                       </td>
+                       <td>
+                           <font style="vertical-align: inherit;">
+                               <font style="vertical-align: inherit;">{{this.nombre}}</font>
+                           </font>
+                       </td>
+                       <td>
+                           <font style="vertical-align: inherit;">
+                               <font style="vertical-align: inherit;">{{this.apellido}}</font>
+                           </font>
+                       </td>
+                       <td>
+                           <font style="vertical-align: inherit;">
+                               <font style="vertical-align: inherit;">{{this.nacimiento}}</font>
+                           </font>
+                       </td>
+                       <td>
+                           <font style="vertical-align: inherit;">
+                               <font style="vertical-align: inherit;">{{this.promedio}}</font>
+                           </font>
+                       </td>
+                       <td>
+                           <font style="vertical-align: inherit;">
+                               <font style="vertical-align: inherit;">{{this.sexo}}</font>
+                           </font>
+                       </td>
+                       <td>
+                           <font style="vertical-align: inherit;">
+                               <font style="vertical-align: inherit;">{{this.fk_idEscuela}}</font>
+                           </font>
+                       </td>
+                   </tr>
+                 {{/each}}
+
+               </tbody>
+           </table>
+       </div>
+       <!-- /.table-responsive -->
+   </div>
+   <!-- /.panel-body -->
+</div>

@@ -1,0 +1,9 @@
+<div class="tareas">
+	<div class="wrapper">
+		<div class="lista" *ngFor="let item of listaTareas">
+			<div  [ngClass]="{'colorno': item.completa, 'color': !item.completa}"></div>
+			<div class="tipo">{{item.mensaje}}</div>
+			<input type="button" class="boton2" value="completa" (click)="tareaTerminada(item)">			
+		</div>
+	</div>
+</div>

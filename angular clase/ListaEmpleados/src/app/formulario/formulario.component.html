@@ -1,0 +1,18 @@
+<form  style="text-align: center" [formGroup]="formulario"
+(ngSubmit)="handleOnSubmit(formulario.value)">
+      <input type="text" placeholder="Introducir el nombre" formControlName="name">
+      <div *ngIf="formulario.controls.name.dirty && formulario.controls.name.errors">
+        El campo nombre es erroneo
+      </div>
+			<input type="text" placeholder="Introducir los apellidos" formControlName="lastName">
+      <input type="text" placeholder="Introducir una Direcccion" formControlName="adress">
+      <div *ngIf="formulario.controls.adress.dirty && formulario.controls.adress.errors?.required">
+        El campo direccion es requerido
+      </div>
+      <input type="text" placeholder="Introducir el Departamento"formControlName="department" >
+
+			<input type="text" placeholder="Agregar foto" formControlName="picture">
+      <input type="submit" placeholder="Validar los datos" [disabled]="!formulario.valid
+      ">
+
+</form>

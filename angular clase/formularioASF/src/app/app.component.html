@@ -1,0 +1,29 @@
+<form [formGroup]="formulario" (ngSubmit)="handleOnSubmit(formulario.value)">
+
+  <h1>Datos personales</h1>
+  <p>
+    <strong>Datos necesarios</strong>
+  </p>
+
+  <input type="text" formControlName="nombre" placeholder="Introducir el nombre"/>
+  <br>
+  <div *ngIf="formulario.controls.nombre.dirty && formulario.controls.nombre.errors">
+    el campo nombre es erroneo
+  </div>
+  <input type="text" formControlName="email" placeholder="Introducir tu email"/>
+  <br>
+  <input type="number" formControlName="edad" placeholder="Introducir tu edad"/>
+  <br>
+  <div *ngIf="formulario.controls.edad.dirty && formulario.controls.edad.errors">
+    {{formulario.controls.edad.errors.mensaje}}
+  </div>
+  <input type="email" formControlName="usurio" placeholder="Introducir un usuario"/>
+  <br>
+  <div *ngIf="formulario.controls.direccion.dirty && formulario.controls.direccion.errors?.required">
+    el campo direccion es requerido
+  </div>
+  <input type="text" formControlName="password" placeholder="Introducir una contraseña" />
+  <br>
+  <input type="submit" [disabled]="!formulario.valid" />
+</form>
+

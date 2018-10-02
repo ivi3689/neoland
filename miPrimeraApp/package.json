@@ -1,0 +1,17 @@
+{
+  "name": "miprimeraapp",
+  "version": "1.0.0",
+  "description": "probando la consola",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ivan",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.87.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  }
+}

@@ -1,0 +1,43 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.wrapper {
+	margin: auto;
+	max-width: 800px;
+	width: 90%;
+}
+ 
+.tareas .lista {
+	list-style: none;
+}
+ 
+.tareas .lista  {
+	border-bottom: 1px solid #B6B6B6;
+}
+ 
+.tareas .lista   {
+	color: #212121;
+	display: block;
+	padding: 20px 0;
+	text-decoration: none;
+}
+.tareas .lista .boton2{
+	float: right;
+	height: 30px;
+}
+.tareas .lista .color{
+	height: 30px;
+	width: 10px;
+	background-color: red;
+	float:left;
+}
+.tareas .lista .colorno{
+	height: 30px;
+	width: 10px;
+	background-color: green;
+	float:left;
+}

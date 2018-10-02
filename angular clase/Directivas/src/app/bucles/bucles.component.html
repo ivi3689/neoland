@@ -1,0 +1,27 @@
+<ul>
+	<li *ngFor="let pers of personas; let indice = index; let primero = first; let ultimo = last; let par = even; let impar = odd;">
+		{{indice}} - {{pers.nombre}} {{par}} {{impar}}
+		<span *ngIf="primero">Primero</span>
+		<span *ngIf="ultimo">Ultimo</span>
+	</li>
+</ul>
+
+
+<table>
+	<thead>
+		<tr>
+			<th>Indice</th>
+			<th>Nombre</th>
+			<th>Apellidos</th>
+			<th>Edad</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let pers of personas; let par = even; let impar = odd; let indice =index;" [ngClass]="{'cPar': par, 'cImpar': impar}">
+			<td>{{indice}}</td>
+			<td>{{pers.nombre}}</td>
+			<td>{{pers.apellidos}}</td>
+			<td>{{pers.edad}}</td>
+		</tr>
+	</tbody>
+</table>

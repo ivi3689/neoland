@@ -1,0 +1,9 @@
+<form
+#nuevaPersona="ngForm"
+(ngSubmit)="handleOnSubmit(nuevaPersona.value)">
+<input type="text" name="nombre" ngModel/>
+<input type="text" name="apellidos" ngModel/>
+<input type="range" name="edad" min="0" max="100" value="25" ngModel/>
+<input type="email" name="email" ngModel/>
+<input type="submit" name="Enviar"/>
+</form>

@@ -1,0 +1,84 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing:border-box;
+}
+.contenedor{
+	width: 870px;
+	height: 800px;
+	background-color: white;
+}
+.cabecera{
+	width: auto;
+	padding: 10px;
+	background-color:lightgrey;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.comida{
+	width: 600px;
+	height: auto;
+	background-color: green;
+	font-weight: bold;
+	float: left;
+}
+.botonComida{
+	width: 600px;
+	height: auto;
+	float: left;	
+}
+.bebida{
+	width: 600px;
+	height: auto;
+	background-color: purple;
+	font-weight: bold;
+	float: left;
+}
+.botonBebida{
+	width: 600px;
+	height: auto;
+	float: left;	
+}
+.pedido{
+	width: 250px;
+	height: auto;
+	background-color: tomato;
+	font-weight: bold;
+	display: inline-block;
+	margin-left: 20px;	
+}
+.comanda{
+	width: 250px;
+	height: 500px;
+	background-color: grey;
+	float: right;
+}
+.boton{
+	width: 100px;
+	height:100px;
+	background-color: blue;
+	margin: 10px;
+	float: left;
+}
+.total{
+	width: 250px;
+	height: auto;
+	background-color: orange;
+	float: right;
+	font-weight: bold;
+}
+.cantidad{
+	width: 250px;
+	height: auto;
+	background-color: lightgrey;
+	float: right;
+	font-weight: bold;
+}
+.calcular{
+	width: 250px;
+	height: auto;
+	background-color: lightblue;
+	float: right;
+	font-weight: bold;
+}

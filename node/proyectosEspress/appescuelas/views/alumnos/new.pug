@@ -1,0 +1,23 @@
+extends ../layout.pug
+
+block contenido
+    form.mt-5(action="/alumnos/create", method="post")
+        .form-group
+            label(for="nombreInput") Nombre
+            input#nombreInput.form-control(type="text", placeholder="nombre", name="nombre")
+        .form-group
+            label(for="apellidoInput") Apellido
+            input#apellidoInput.form-control(type="text", placeholder="Apellido", name="apellido")
+        .form-group
+            label(for="promedioInput") Promedio
+            input#promedioInput.form-control(type="text", placeholder="nota media", name="promedio")
+        .form-group
+            label(for="nacimientoInput") Nacimiento 
+            input#inputNacimiento.form-control(type="text", placeholder="fecha de nacimiento", name="nacimiento")
+        .form-group
+            label(for="sexoInput") Sexo
+            input#sexoInput.form-control(type="text", placeholder="genero" name="sexo")
+        .form-group
+            label(for="fk_idEscuelaInput") Escuela
+            input#fk_idEscuelaInput.form-control(type="text", placeholder="Escuela" name="fk_idEscuela")
+        button.btn.btn-primary.ml(type="submit") Sign in

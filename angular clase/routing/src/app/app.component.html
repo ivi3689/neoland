@@ -1,0 +1,19 @@
+<ul>
+  <li><a [routerLink]="['/']" [routerLinkActive]="'activo'">Home</a></li>
+  <li><a [routerLink]="['/primero']" [routerLinkActive]="'activo'">Primer Componente</a></li>
+  <li><a [routerLink]="['/segundo']" [routerLinkActive]="'activo'">Segundo Componente</a></li>
+  <li><a [routerLink]="['/saludo']" [routerLinkActive]="'activo'">Saludos cordiales</a></li>
+  <li><a [routerLink]="['/privado']" [routerLinkActive]="'activo'">Privado</a></li>
+</ul>
+
+<div style="text-align: center">
+  <router-outlet></router-outlet>
+</div>
+
+<div>
+  <button (click)="handleClick('/')">Home</button>
+  <button (click)="handleClick('/primero')">Primer componente</button>
+  <button (click)="handleClick('/segundo')">Segundo Componente</button>
+  <button (click)="handleClick('/saludo')">Saludo Componente</button>
+  <button (click)="handleClick('/privado')">Privado Componente</button>
+</div>

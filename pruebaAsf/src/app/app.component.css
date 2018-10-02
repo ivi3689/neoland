@@ -1,0 +1,73 @@
+*{margin: 0; padding: 0}
+
+body{font-family: Arial;}
+
+h2{
+	font-size: 150%;
+	text-align: center;
+	background-color: tomato;
+	color: white;
+	padding: 10px;
+}
+
+h3{
+	font-size: 120%;
+	background-color: black;
+	color: white;
+	padding: 10px;
+}
+
+h4{
+	font-size: 110%;
+	padding: 10px;
+}
+
+p{
+	line-height: 18px;
+	font-style: italic;
+	padding: 10px;
+}
+
+header{
+ margin-bottom: 20px;
+}
+
+header select{
+	margin-top: 20px;
+}
+
+#wrapper{
+	width: 960px;
+	margin: 0 auto;
+}
+
+main .table{
+	width: 100%;
+	margin: 0 auto;
+	border: 2px solid tomato;
+	margin-bottom: 20px;
+}
+
+footer{
+	background-color: black;
+	color: white;
+	padding: 10px;
+}
+input, select{
+  margin: 1%;
+  text-align: center;
+
+}
+
+.tiempo{ width: 17.5%;}
+tr{
+  text-align: center;
+}
+
+button{
+	width: 50px;
+	height:50px;
+	border-radius: 50%;
+	background-color: green;
+}
+

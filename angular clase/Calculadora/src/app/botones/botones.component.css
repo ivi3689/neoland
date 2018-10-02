@@ -1,0 +1,27 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.contorno {
+	background-color: grey;
+	width:300px; 
+	height:350px;
+	margin: 0 auto;
+}
+input{
+	border-radius: 20px;
+	width: 230px;
+	text-align: center;
+	align-items: center;
+	margin: 10px 10px;
+	padding: 20px;
+}
+
+button{
+	width: 70px;
+	height:60px;
+	border-radius: 50%;
+	background-color: green;
+}

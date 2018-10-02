@@ -1,0 +1,12 @@
+<form #formulario="ngForm" (ngSubmit)="handleOnSubmit(formulario.value)">
+  <p>REGISTRO</p>
+  <input type="text" name="name" placeholder="Introducir el nombre" ngModel/>
+  <input type="text" name="surname" placeholder="Introducir los apellidos" ngModel/>
+  <input type="text"  name="username" placeholder="Introducir un usuario" ngModel/>
+  <input type="password"  name="password"placeholder="Introducir una contraseña " ngModel/>
+  <input type="password" name="password_repeat" placeholder="Repetir la contraseña" ngModel/>
+  <input type="mail"  name="mail"placeholder="Introducir tu email" ngModel/>
+  <input type="number" name="age" placeholder="Introducir tu edad" ngModel/>
+  <input type="text"  name="address" placeholder="Introducir una direccion" ngModel/>
+  <input type="submit" value="Enviar"/>
+</form>

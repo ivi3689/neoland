@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <div class="titular">post´s</div>
+  <div class="ficha" *ngFor='let esc of arrPosts'>
+    <img [src]="esc.imagen" alt="">
+    <p >Titulo: {{esc.titulo}}</p>
+    <p>Texto: {{esc.texto}}</p>
+    <p>Autor: {{esc.autor}}</p>
+    <p>Fecha: {{esc.fecha}}</p>
+    <p>Categoria: {{esc.categoria}}</p>
+
+  </div>
+
+
+</div>

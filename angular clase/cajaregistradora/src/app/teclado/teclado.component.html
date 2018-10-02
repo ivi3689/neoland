@@ -1,0 +1,27 @@
+<div class="contenedor">
+
+	<div class="cabecera">CABECERA</div>
+
+	
+	<div class="comida">Comida</div>
+
+		<div class="botonComida">
+			<div class="boton" *ngFor="let prod of comida" (click)="agregarAPedido(prod)"><img [src]="prod.imagen"></div>
+		</div>
+
+	<div class="bebida">Bebida</div>
+ 
+		<div class="botonBebida">
+			<div class="boton"*ngFor="let prod of bebida" (click)="agregarAPedido(prod)"><img [src]="prod.imagen"></div>
+		</div>
+		
+
+	<div class="pedido">Pedido 
+		<div [innerHtml]="ped.mostrarPedido()" class="comanda"></div>
+		<div class="total">{{ped.precioTotal()}}</div>
+		<div class="cantidad">Precio total en €</div>
+		<div class="calcular">Calcular Precio</div>
+	</div>
+</div>
+<app-lista-producto titulo="Comida" [productos]="comida"></app-lista-producto>
+<app-lista-producto titulo="Bebida" [productos]="bebida" ></app-lista-producto>

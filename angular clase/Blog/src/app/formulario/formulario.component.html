@@ -1,0 +1,20 @@
+<div class="wrapper">
+  <form [formGroup]="formulario" (ngSubmit)="prueba()">
+    <input type="text" formControlName="titulo" placeholder="Introducir el titulo" />
+    <input type="text" formControlName="titulo" placeholder="Introducir el nombre" />
+    <br>
+
+    <input type="text" formControlName="texto" placeholder="Introducir tu texto" />
+    <br>
+    <input class="texto" type="text" formControlName="autor" placeholder="Introducir el autor" />
+    <br>
+
+    <input type="text" formControlName="fecha" placeholder="Introducir la fecha" />
+    <br>
+
+    <input type="text" formControlName="categoria" placeholder="Introducir una categoria" />
+    <input type="text" formControlName="imagen" placeholder="Introducir una imagen" />
+    <br>
+    <input type="submit" [disabled]="!formulario.valid"/>
+  </form>
+</div>

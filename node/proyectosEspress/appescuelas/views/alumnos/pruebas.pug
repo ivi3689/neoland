@@ -1,0 +1,27 @@
+extends ../layout.pug 
+
+mixin lista(numero)
+    ul
+        -var cont = 0
+        while cont < numero
+            li= ++cont
+
+block contenido
+    h1= cabecera 
+    p Este es mi mensaje: #{mensaje}
+    div#enlaces.contenedor-enlaces.container
+        a(href="http://www.google.es", id="enlaceGoogle") Enlace a Google
+        -var clases = ['clase1', 'clase2', 'clase3']
+        a(class=clases) Enlace con clases
+    div
+        -var manzanas = 10
+        case manzanas
+            when 0
+                p Tienes cero manzanas
+            when 1
+                p Tienes una manzana
+            default
+                p Tienes #{manzanas} manzanas
+    div
+        +lista(3)
+        +lista(7)

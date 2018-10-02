@@ -1,0 +1,9 @@
+<div class="escritor" *ngFor="let esc of arrEscritores" (click)="navegarADetalle(esc)">
+  <img [src]=" esc.imagen"/>
+
+  <p>nombre: {{esc.nombre}}</p>
+  <p>apellidos: {{esc.apellidos}}</p>
+  <p>pais: {{esc.pais}}</p>
+
+
+</div>

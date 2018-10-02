@@ -1,0 +1,13 @@
+
+.cuadro{
+  border: 3px solid blue;
+  width: 39%;
+  margin: 2% 5%;
+  height: 520px;
+  float: left;
+  border:1px solid grey;
+  border-radius: 20px;
+
+}
+
+

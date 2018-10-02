@@ -1,0 +1,74 @@
+
+
+body{
+	font-family: Arial, sans-serif;
+	font-size: 100%;
+}
+
+app-listado{
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+header{
+	background-color: #eee;
+	padding: 20px; 
+}
+
+main .filtros{
+	background-color: black;
+	padding: 10px;
+}
+
+main{
+	background-color: #266a97;
+}
+
+main .tareas{
+	padding: 20px;
+}
+
+main .tareas div{
+	padding: 30px;
+	border-radius: 15px;
+	margin-bottom: 20px;
+}
+
+main .tareas div:last-child{
+	margin-bottom: 0px;
+}
+
+main .tareas div a {
+	background-color: black;
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+	padding: 10px;
+	margin-left: 30px;
+}
+
+main .tareas div a:hover{
+	background-color: grey;
+	color: black;
+}
+
+main .tareas .urgente{
+	background-color: tomato;
+}
+
+main .tareas .diaria{
+	background-color: lightgreen;
+}
+
+main .tareas .mensual{
+	background-color: lightblue;
+}
+
+
+
+footer{
+	background-color: black;
+	padding: 10px;
+	color: white;
+
+}

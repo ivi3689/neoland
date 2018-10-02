@@ -1,0 +1,36 @@
+
+<div class="rojo">
+<saludo></saludo>
+
+</div>
+
+
+<div class="verde">
+<saludo></saludo>
+
+
+</div>
+
+<app-sumar operador1="3" operador2="5" (result)="recogerResultado($event)"></app-sumar>
+
+<app-persona nombre ='juancho' apellidos = 'perez' edad = '23'></app-persona>
+<app-persona nombre = 'juan' apellidos = 'garcia' edad = '23'></app-persona>
+
+<app-persona [nombre]="personas[0].nombre"
+[apellidos]="personas[0].apellidos"
+[edad]="personas[0].edad"></app-persona>
+
+<app-persona [nombre]="personas[1].nombre"
+[apellidos]="personas[1].apellidos"
+[edad]="personas[1].edad"></app-persona>
+
+<app-persona [nombre]="personas[2].nombre"
+[apellidos]="personas[2].apellidos"
+[edad]="personas[2].edad"></app-persona>
+
+<app-contador time="10" (onFinished)="manejarFinished()"></app-contador>
+<app-contador time="12"(onFinished)="manejarFinished()"></app-contador>
+<app-contador time="15"(onFinished)="manejarFinished()"></app-contador>
+
+
+

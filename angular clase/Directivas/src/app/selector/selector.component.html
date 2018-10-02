@@ -1,0 +1,15 @@
+<select (change)="handleSelect($event)">
+	<option value="uno">UNO</option>
+	<option value="dos">DOS</option>
+	<option value="tres">TRES</option>
+	<option value="cuatro">CUATRO</option>
+</select>
+
+<div [ngSwitch]="valorSeleccionado">
+	<p *ngSwitchCase="'uno'"> el valor seleccionado es el UNO</p>
+	<p *ngSwitchCase="'dos'"> el valor seleccionado es el DOS</p>
+	<p *ngSwitchCase="'tres'"> el valor seleccionado es el TRES</p>
+	<p *ngSwitchCase="'cuatro'"> el valor seleccionado es el CUATRO</p>
+	<p *ngSwitchDefault> Ninguno de los valores correctos</p>	
+</div>
+

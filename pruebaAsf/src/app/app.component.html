@@ -1,0 +1,64 @@
+﻿<div id="wrapper">
+  <header>
+    <h2>Seleccionar forma de ahorro</h2>
+    <select id="metodo">
+      <option value="">Selecciona un metodo o reto </option>
+      <option value="">Método de la edad </option>
+      <option value="">Reto de las 52 semanas </option>
+      <option value="">Reto de los 30 días </option>
+      <option value="">Reto de los 365 dias </option>
+    </select>
+      <select id="cantidad">
+       <option value="">Selecciona una cantidad</option>
+      </select> 
+    <input class="cantidad" type="text" placeholder="Cantidad minima diaria">
+    <input class="tiempo" type="text" placeholder="¿Cuanto tiempo necesitas?">
+    <input type="button" value="Mostrar tabla" (click)="nuevaTabla()">
+  
+</header>
+
+ 
+ <main id="main">
+
+
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">Día</th>
+          <th scope="col"></th>
+          <th scope="col">Ahorro</th>
+          <th scope="col">Cantidad acumulada</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+                <tr *ngFor="let t of tabla; let index=index; let last = last;">
+          <th scope="row">1</th>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><button (click)="aumentarTabla()" *ngIf="last">+</button></td>
+
+        <!-- <tr *ngFor="let i=1;  i<52;">
+          <th scope="row"></th>
+          <td placeholder="constante">{{tiempo}}</td>
+          <td><input type="text" placeholder="cantidad ahorro">{{cantidad}}</td>
+          <td>{{cantidad *[i]}}</td>
+          <td><button>+</button></td>
+        </tr> -->
+        <tr class="table-active">
+          <th scope="row">Tiempo total:</th>
+          <td></td>
+          <td></td>
+          <td>€</td>
+          <td><button>=</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    Tabla proporcionada por ASF
+  </footer>
+</div>
+
+

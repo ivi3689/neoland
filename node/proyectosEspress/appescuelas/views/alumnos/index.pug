@@ -1,0 +1,25 @@
+extends ../layout.pug
+
+block contenido
+    table.table.table-striped.mt-5
+        thead
+            tr
+                th(scope="col") Nombre
+                th(scope="col") Apellido
+                th(scope="col") Fecha de nacimiento
+                th(scope="col") Promedio
+                th(scope="col") Sexo
+                th(scope="col") ID Escuela
+                th(scope="col") Id Alumno
+        tbody
+            each alumno in alumnos
+                tr
+                    td= alumno.nombre
+                    td= alumno.apellido
+                    td= alumno.nacimiento
+                    td= alumno.promedio
+                    td= alumno.sexo
+                    td= alumno.fk_idEscuela
+                    td            
+                       a(href="./"+alumno.id, id="mostrar_id") enlace id
+                        

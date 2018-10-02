@@ -1,0 +1,78 @@
+
+<div class="container">
+    <div class="chat">
+        <h1>nuevo chat</h1>
+        <div> 
+            <p id="countUsers"></p>
+        </div>
+            <div id="messages">
+                              
+            </div>              
+    </div> 
+    <input type="text" name="nick" id="nick" placeholder="nick"></input>
+    <input type="text" name="message" id="message" placeholder="message"></input>
+     <button id="btnSend">Enviar</button>  
+     <div id="aviso"></div>
+</div>
+<script>
+    let socket = io()
+
+    $('#btnSend').click(()=>{
+        socket.emit('chat_message', {
+            nick: $('#nick').val(),
+            message: $('#message').val()
+        })
+    })
+
+    $('#btnSend').keypress(($event)=>{
+        if($event.keyCode === 13){
+            socket.emit('chat_message', {
+                nick: $('#nick').val(),
+                message: $('#message').val()
+            }) 
+        }
+    })
+    socket.on('chat_message', (msg)=>{
+        $('#messages').append($('<p>').append(`<b>${msg.nick}:</b> ${msg.message}`))  
+        notificar(msg.nick, msg.message)      
+    })
+
+    socket.on('chat_users', (count)=>{
+        $('#countUsers').text(`Usuarios conectados: ${count}`)
+    })
+        //pusher
+     Pusher.logToConsole = true;
+
+    var pusher = new Pusher('6e4f9dd507844b38715c', {
+      cluster: 'eu',
+      forceTLS: true
+    });
+
+     var channel = pusher.subscribe('notificacion');
+    channel.bind('nueva_notificacion', function(data) {
+      //notificar('SERVER', data.mensaje)
+      $('$aviso').text(data.mensaje)
+    });
+
+    function notificar(nick, message){
+        if(!("Notification" in window)){
+            alert('No puedes ver las notificaciones ')
+        }else if(Notification.permission === 'granted'){
+            let options = {
+                body: message,
+                dir: 'ltr'
+            }
+            let notif = new Notification(`${nick} ha escrto un mensaje`, options)
+        }else if(Notification.permission !== 'denied'){
+            Notification.requestPermission((permission)=>{
+                if(permission === 'granted'){
+                    let options = {
+                        body: message,
+                        dir: 'ltr'
+                }
+                let notif = new Notification(`${nick} ha escrto un mensaje`, options)
+                }
+            })
+        }  
+    }
+</script>

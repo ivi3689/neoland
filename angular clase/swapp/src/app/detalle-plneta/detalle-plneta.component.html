@@ -1,0 +1,16 @@
+<div>
+  <h2>Nombre: {{detallePlaneta?.name}}</h2>
+  <p>Clima: {{detallePlaneta?.climate}}</p>
+  <p>Terreno: {{detallePlaneta?.terrain}}</p>
+  <p>Diametro: {{detallePlaneta?.diameter}}</p>
+  <p>Rotacion: {{detallePlaneta?.rotation_period}}</p>
+  <p>Periodo Orbital: {{detallePlaneta?.orbital_period}}</p>
+  <p>Gravedad: {{detallePlaneta?.gravity}}</p>
+  <p>Superficie acuatica: {{detallePlaneta?.surface_water}}</p>
+  <p>Poblacion: {{detallePlaneta?.population}}</p>
+</div>
+<div *ngFor="let persUrl of detallePlaneta?.residents" [routerLink]="['/residents', persUrl]" >
+<button>{{persUrl}}</button>
+</div>
+
+

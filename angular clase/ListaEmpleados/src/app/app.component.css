@@ -1,0 +1,21 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.cabecera{
+	width: auto;
+	height: auto;
+	padding: 30px;
+	background-color: slateblue;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	font-size: 30px;
+}
+ul .li{
+	float: left;
+	padding: 10px;
+	
+}

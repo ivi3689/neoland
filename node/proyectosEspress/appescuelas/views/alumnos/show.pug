@@ -1,0 +1,20 @@
+extends ../layout.pug
+
+block contenido
+    table.table.table-striped.mt-5
+        thead
+            tr
+                th(scope="col") Nombre
+                th(scope="col") Apellido
+                th(scope="col") Fecha de nacimiento
+                th(scope="col") Promedio
+                th(scope="col") Sexo
+                th(scope="col") ID Escuela
+        tbody
+                tr
+                    td= alumno.nombre
+                    td= alumno.apellido
+                    td= alumno.nacimiento
+                    td= alumno.promedio
+                    td= alumno.sexo
+                    td= alumno.fk_idEscuela

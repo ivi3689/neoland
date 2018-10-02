@@ -1,0 +1,29 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+form {
+	  margin: 0 auto;
+	  width: 300px;
+
+	  border: 3px solid #CCC;
+    border-radius: 1em;
+      }
+.texto{
+  height: 100px;
+}
+input {
+	width: auto;
+	height:20px;
+    margin: 10px ;
+      }
+
+
+input.ng-valid{
+border:3px solid green;
+}
+
+input.ng-invalid{
+border:3px solid red;
+}

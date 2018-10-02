@@ -1,0 +1,43 @@
+<div class="col-md-6 offset-md-3 text-left">
+  <form [formGroup]="formulario" (ngSubmit)="enviarStep1()">
+    <div class="form-group">
+      <label for="nombre">Name</label>
+      <input type="text" [ngClass]="{'form-control': true, 'is-valid':(formulario.controls.nombre.dirty && formulario.controls.nombre.valid), 'is-invalid':(formulario.controls.nombre.dirty && !formulario.controls.nombre.valid)}"
+        id="exampleFormControlName" placeholder="Introduce el name" formControlName="nombre">
+        <div class="error-feedback" *ngIf="formulario.controls.nombre.dirty && formulario.controls.nombre.errors">
+            Por favor ponga un nombre.
+          </div>
+    </div>
+    <div class="form-group">
+      <label for="apellido">Apellido</label>
+      <input type="text" [ngClass]="{'form-control': true, 'is-valid':(formulario.controls.apellido.dirty && formulario.controls.apellido.valid), 'is-invalid':(formulario.controls.apellido.dirty && !formulario.controls.apellido.valid)}"
+        id="apellido" placeholder="Introduce los apellidos" formControlName="apellido">
+        <div class="error-feedback" *ngIf="formulario.controls.apellido.dirty && formulario.controls.apellido.errors">
+            Por favor ponga los apellidos.
+          </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" [ngClass]="{'form-control': true, 'is-valid':(formulario.controls.email.dirty && formulario.controls.email.valid), 'is-invalid':(formulario.controls.email.dirty && !formulario.controls.email.valid)}"
+        id="exampleFormControlEmail" placeholder="name@example.com" formControlName="email">
+        <div class="error-feedback" *ngIf="formulario.controls.email.dirty && formulario.controls.email.errors">
+            Por favor ponga un email en uso.
+          </div>
+    </div>
+    <div class="form-group">
+      <label for="telefono">Telefono</label>
+      <input type="text" [ngClass]="{'form-control': true, 'is-valid':(formulario.controls.telefono.dirty && formulario.controls.telefono.valid), 'is-invalid':(formulario.controls.telefono.dirty && !formulario.controls.telefono.valid)}" id="exampleFormControlTelefono" placeholder="Introduce el telefono" formControlName="telefono">
+      <div class="error-feedback" *ngIf="formulario.controls.telefono.dirty && formulario.controls.telefono.errors">
+          Por favor ponga un telefono correcto.
+        </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Nif</label>
+      <input type="text" [ngClass]="{'form-control': true, 'is-valid':(formulario.controls.nif.dirty && formulario.controls.nif.valid), 'is-invalid':(formulario.controls.nif.dirty && !formulario.controls.nif.valid)}" id="exampleFormControlNif" placeholder="Introduce el Nif" formControlName="nif">
+      <div class="error-feedback" *ngIf="formulario.controls.nif.dirty && formulario.controls.nif.errors">
+          Por favor ponga un NIF correcto.
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!formulario.valid">Submit</button>
+  </form>
+</div>

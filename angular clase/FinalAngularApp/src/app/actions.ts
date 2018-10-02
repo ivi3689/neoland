@@ -1,0 +1,1 @@
+export const REGISTRO_STEP1 = 'REGISTRO_STEP1'

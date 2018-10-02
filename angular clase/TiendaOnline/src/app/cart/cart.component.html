@@ -1,0 +1,8 @@
+<div *ngFor="let p of productos">
+
+  <div class="cuadro"><img class="imagen" [src]="p?.image" alt="">
+    <h2>Nombre: {{p.name}}</h2>
+    <p>Precio: {{p.price}}</p>
+  </div>
+
+</div>

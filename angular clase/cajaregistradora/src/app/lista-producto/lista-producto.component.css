@@ -1,0 +1,24 @@
+div{
+	background-color: green;
+	width: 900px;
+	height: 800px;
+}
+.comida{
+	width: 600px;
+	height: auto;
+	background-color: green;
+	font-weight: bold;
+	float: left;
+}
+.botonComida{
+	width: 600px;
+	height: auto;
+	float: left;
+}
+.boton{
+	width: 100px;
+	height:100px;
+	background-color: blue;
+	margin: 10px;
+	float: left;
+}
